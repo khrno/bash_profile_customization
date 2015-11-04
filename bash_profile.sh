@@ -8,16 +8,14 @@ alias s='open -a "Sublime Text"'
 alias mdy="cd ~/Development/Modyo"
 
 # Bash Profile Customization
-alias bprofile="subl ~/.bash_profile"
+alias bprofile="subl ~/Development/Utils/Bash\ Profile/bash_profile"
 alias reload="source ~/.bash_profile"
 
 # Color LS
-colorflag="-G"
-alias ls="command ls ${colorflag}"
-alias l="ls -lF ${colorflag}" # all files, in long format
-alias ll="l"
-alias la="ls -laF ${colorflag}" # all files inc dotfiles, in long format
-alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx # dark background
+alias ls='ls -lghFG'
+alias ll='ls -lghFG'
+alias l='ls -lghFG'
 
 # Quicker navigation
 alias ..="cd .."
@@ -34,8 +32,6 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Git
 # You must install Git first
-
-
 git config --global color.ui true
 git config --global format.pretty oneline
 git config --global core.autocrl input
@@ -46,6 +42,11 @@ alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
 alias gp='git push'
 alias grm='git rm $(git ls-files --deleted)'
+
+# GREP
+alias grep='grep -n'
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;35;40'
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
