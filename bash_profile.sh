@@ -1,5 +1,7 @@
 ### ANDROID
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/1.6.0.jdk
+
+### Aliases
 # Open specified files in Sublime Text
 # "s ." will open the current directory in Sublime
 alias s='open -a "Sublime Text"'
@@ -12,7 +14,7 @@ alias laika="cd ~/Development/Laika"
 alias laikaios="cd ~/Development/Laika/Laika-iOS"
 
 # Bash Profile Customization
-alias bprofile="atom ~/.bash_profile"
+alias bprofile="subl ~/.bash_profile"
 alias reload="source ~/.bash_profile"
 
 # Color LS
