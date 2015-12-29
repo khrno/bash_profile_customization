@@ -1,5 +1,5 @@
-### Aliases
-
+### ANDROID
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/1.6.0.jdk
 # Open specified files in Sublime Text
 # "s ." will open the current directory in Sublime
 alias s='open -a "Sublime Text"'
@@ -7,8 +7,12 @@ alias s='open -a "Sublime Text"'
 # Modyo Workspace
 alias mdy="cd ~/Development/Modyo"
 
+# Laika Workspace
+alias laika="cd ~/Development/Laika"
+alias laikaios="cd ~/Development/Laika/Laika-iOS"
+
 # Bash Profile Customization
-alias bprofile="subl ~/Development/Utils/Bash\ Profile/bash_profile"
+alias bprofile="atom ~/.bash_profile"
 alias reload="source ~/.bash_profile"
 
 # Color LS
@@ -98,9 +102,9 @@ function parse_git_branch() {
 
 # Change this symbol to something sweet.
 # (http://en.wikipedia.org/wiki/Unicode_symbols)
-symbol="⚡ "
+symbol="→ "
 
-export PS1="\[${MAGENTA}\]\u \[$RESET\]in \[$GREEN\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RESET\]\n$symbol\[$RESET\]"
+export PS1="\[${MAGENTA}\]\u \[$RESET\]in \[$GREEN\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$ORANGE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 
@@ -108,6 +112,8 @@ export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 # Only show the current directory's name in the tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+export GEM_HOME="$HOME/.gems"
 
 # init z! (https://github.com/rupa/z)
 #. ~/z.sh
